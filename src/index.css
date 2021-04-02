@@ -1,0 +1,16 @@
+.mainDiv {
+    width: 100%
+}
+
+.mainDiv h1{
+    text-align: center;
+}
+
+.contentDiv img {
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 600px){
+
+}
