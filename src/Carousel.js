@@ -1,5 +1,4 @@
 import React from 'react'
-import './index.css'
 
 const Carousel = () => {
     const [index, setIndex] = React.useState(0);
@@ -61,12 +60,12 @@ const Carousel = () => {
     };
 
     return ( 
-        <div className='mainDiv' style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
-            <h1>Carousel</h1>
+        <div style={{width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+            <h1 style={{textAlign: 'center'}}>Carousel</h1>
             <div className='contentDiv' style={{width: '100%', display: 'flex', justifyContent: 'center'}} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} >
                 <button onClick={leftSlide}>{"<"}</button>
-                <img style={{marginRight: '15px'}} src={images[index]} alt={index} />
-                {index === 7?<img  src={images[0]} alt={0} />:<img  src={images[index+1]} alt={index+1} />}
+                <img style={{marginRight: '15px', width: '40%'}} src={images[index]} alt={index} />
+                {index === 7?<img style={{width: '40%'}} src={images[0]} alt={0} />:<img style={{ width: '40%'}} src={images[index+1]} alt={index+1} />}
                 <button onClick={rightSlide}>{">"}</button>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '15px'}}>
